@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+body { margin: 0 0 0 30px; }
+input[type='text'] {
+	margin-left: 10px;
+}
+button {
+	width: 215px;
+}

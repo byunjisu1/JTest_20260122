@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="MemberMapper">
+	<select id="getPwById" resultType="java.lang.String">
+		SELECT pw FROM member WHERE id=#{id}
+	</select>
+	<insert id="insertMember">
+		INSERT INTO member(id, pw, name)
+		VALUES(#{id}, #{pw}, #{name})
+	</insert>
+	<select id="getProfile" resultType="map">
+		SELECT id, name, point FROM member WHERE id=#{id}
+	</select>
+	<select id="getPoint" resultType="java.lang.Integer">
+		SELECT point FROM member WHERE id=#{id}
+	</select>
+	<update id="updatePoint">
+		UPDATE member SET point=#{point} WHERE id=#{id}
+	</update>
+	<select id="getMemberList" resultType="com.js.dto.MemberDto">
+		SELECT id, pw, name, point FROM member
+	</select>
+	<update id="updateMemberDetail">
+		UPDATE member SET pw=#{pw}, name=#{name}, point=#{point} WHERE id=#{id}
+	</update>
+	<delete id="deleteMember">
+		DELETE FROM member WHERE id=#{id}
+	</delete>
+	<select id="getMemberDetail" resultType="com.js.dto.MemberDto">
+		SELECT id, pw, name, point FROM member WHERE id=#{id}
+	</select>
+	<select id="getTotalMember" resultType="java.lang.Integer">
+		SELECT COUNT(*) FROM member
+	</select>
+	<update id="updateSchedulerPoint">
+		UPDATE member SET point=point+1
+	</update>
+</mapper>

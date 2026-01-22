@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+body { margin: 0 0 0 30px; }
+input:nth-child(2) { margin-left: 28px; }
+input[type='password'] { margin-left: 19px; }
+button { width: 235px; }

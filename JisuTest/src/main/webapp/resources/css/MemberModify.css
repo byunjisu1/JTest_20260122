@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+* { box-sizing: border-box; }
+body { margin: 0; padding: 20px; }
+div:nth-child(1) {
+	font-size: 40px;
+	font-weight: bold;
+	margin: 30px 0;
+}
+form > input[name='id'] { margin-left: 34px; }
+form > input[name='pw'] { margin-left: 25px; }
+form > input[name='name'] { margin-left: 5px; }
+form > input[name='point'] { margin-left: 10px; }
+form > button { width: 230px; cursor: pointer; }
